@@ -1,0 +1,59 @@
+apiVersion: spp-data-protection.isf.ibm.com/v1alpha1
+kind: Recipe
+metadata:
+  name: message-board-backup-recipe
+  namespace: message-board
+spec:
+  appType: message-board
+  groups:
+    - backupVolumes: fusion
+      name: message-board-volumes
+      type: volume
+    - backupVolumes: fusion
+      excludedResourceTypes:
+        - pods
+        - replicasets
+      name: message-board-resources
+      type: resource
+  hooks:
+    - chks:
+        - condition: '{$.spec.replicas} == {$.status.readyReplicas}'
+          name: replicasReady
+          onError: fail
+          timeout: 600
+      labelSelector: 'app=message-board,component=database'
+      name: postgres-deployment-check
+      namespace: '${GROUP.message-board-resources.namespace}'
+      onError: fail
+      selectResource: deployment
+      timeout: 120
+      type: check
+    - labelSelector: 'app=message-board,component=database'
+      name: postgres-instance-exec
+      namespace: '${GROUP.message-board-resources.namespace}'
+      onError: fail
+      ops:
+        - command: |
+            ["/bin/sh", "-c", "echo Starting PostgreSQL checkpoint... && psql -U $POSTGRES_USER -d $POSTGRES_DB -c 'CHECKPOINT;'"]
+          container: postgres
+          name: checkpoint
+          overwrite: false
+          timeout: 60
+      singlePodOnly: true
+      timeout: 120
+      type: exec
+  workflows:
+    - failOn: any-error
+      name: backup
+      priority: 0
+      sequence:
+        - group: message-board-resources
+        - hook: postgres-instance-exec/checkpoint
+        - group: message-board-volumes
+    - failOn: any-error
+      name: restore
+      priority: 0
+      sequence:
+        - group: message-board-volumes
+        - group: message-board-resources
+        - hook: postgres-deployment-check/replicasReady
