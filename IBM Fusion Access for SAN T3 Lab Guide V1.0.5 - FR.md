@@ -16,7 +16,7 @@ alt="Une personne debout devant un écran d&#39;ordinateur Description généré
 - [Connection à l'environnement du laboratoire](#connection-à-lenvironnement-du-laboratoire)
   - [OpenShift Web Console](#openshift-web-console)
   - [Accès en ligne de commande (optionnel)](#accès-en-ligne-de-commande-optionnel)
-- [Déploiement de Fusion Access pour SAN](#déploiement-de-fusion-access-pour-san)
+- [Déploiement de Fusion Access for SAN](#déploiement-de-fusion-access-for-san)
 - [Déploiement Fusion Data Foundation](#déploiement-fusion-data-foundation)
 - [Déploiement de l’application message-board](#déploiement-de-lapplication-message-board)
 - [Utilisation de l’application message-board](#utilisation-de-lapplication-message-board)
@@ -216,7 +216,7 @@ l'environnement du laboratoire que vous utiliserez.
 <tr>
 <td>IBM Storage Scale</td>
 <td>192.168.252.5</td>
-<td>Racine</td>
+<td>root</td>
 <td>Passw0rd !</td>
 </tr>
 <tr>
@@ -312,7 +312,7 @@ kubeadmin xxxx-xxxx-xxxx-xxxx
 
     <img src="./media/image7.png" />
 
-# Déploiement de Fusion Access pour SAN
+# Déploiement de Fusion Access for SAN
 
 Le stockage SAN étant bien connecté aux Workers, nous pouvons déployer IBM Fusion Access for SAN.
 
@@ -354,7 +354,7 @@ Dans la console OpenShift, sélectionnez le menu **Workloads (1) > Secrets
 style="width:7.26389in;height:4.45694in" />
 
 Dans **Secret name**, entrez **fusion-pullsecret**, dans **Key**, entrez **ibm-entitlement-key** puis **copiez/collez** la clef fournit dans le
-lien ci-dessus dans le cham **value** réservée à cet effet, cliquez sur **Create**
+lien ci-dessus dans le champ **value** réservé à cet effet, cliquez sur **Create**
 
 <img src="./media/image14.png"
 style="width:7.26389in;height:4.45694in" />
@@ -389,7 +389,7 @@ style="width:7.26389in;height:3.73264in" />
 
 Dans le menu lateral, sélectionnez **Storage** > **Fusion Access for SAN**. 
 
-Notez que vous devrez peut-être rafraîchir votre page web (F5) si vous ne voyez pas Fusion Access pour SAN dans Stockage.
+Notez que vous devrez peut-être rafraîchir votre page web (F5) si vous ne voyez pas Fusion Access for SAN dans Stockage.
 
 <img src="./media/image19.png"
 style="width:7.26389in;height:3.73264in" />
@@ -469,7 +469,7 @@ Vous pouvez accéder à la vue Tableau de bord en cliquant sur les quatre barres
 <img src="./media/image31.png"
 style="width:7.26389in;height:3.65764in" />
 
-Dans la console OpenShift, sur la page **Storage > Storage Classes**, une vérification rapide dmontrer qu'une nouvelle classe de stockage a été créée par l'opérateur Fusion Access for SAN.  
+Dans la console OpenShift, sur la page **Storage / Storage Classes**, une vérification rapide dmontrer qu'une nouvelle classe de stockage a été créée par l'opérateur Fusion Access for SAN.  
 Le nom correspond à celui du filesystem. (fusion3 dans notre exemple)
 
 <img src="./media/image32.png"
