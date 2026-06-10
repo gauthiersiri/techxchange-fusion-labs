@@ -344,7 +344,7 @@ style="width:7.26389in;height:3.73681in" />
 Avant de créer notre cluster IBM Fusion Access for SAN, nous devons créer un "pull secret" vers la bibliothèque de conteneurs IBM
 (cp.icr.io).
 
-Vous pouvez utiliser la clé disponible dans ce document :
+Vous pouvez utiliser la clé disponible dans ce document (en cliquant droit pour ouvrir dans une autre tab) :
 <https://ibm.box.com/v/clef-acces-repo-ibm>
 
 Dans la console OpenShift, sélectionnez le menu **Workloads (1) > Secrets
@@ -741,11 +741,10 @@ Pour la retrouver facilement dans la console OpenShift, cliquez sur **Home / Sea
 <img src="./media/image69.png"
 style="width:7.26389in;height:4.15556in" />
 
-> Note: La Custom Resrouce PolicyAssignement permet d'associer une politique de sauvegarde à une application. Pour chaque politique de sauvegarde assignée a l'application, une objet PolicyAssignment est créé.
+> Note: La Custom Resource PolicyAssignement permet d'associer une politique de sauvegarde à une application. Pour chaque politique de sauvegarde assignée à l'application, une objet PolicyAssignment est créé.
 
 Cliquez sur la PolicyAssignment pour l’éditer.  
-Recherchez la section **spec**, puis **ajoutez la section recipe** comme dans la capture ci-dessous et
-cliquez sur **Save**
+Recherchez la section **spec** (Ctrl+F pour afficher la boite de recherche), puis, si nécessaire, **ajoutez la section recipe** comme dans la capture ci-dessous et cliquez sur **Save**
 ```yaml
 ...
   recipe :

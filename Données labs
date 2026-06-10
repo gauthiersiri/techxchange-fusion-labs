@@ -1,0 +1,11 @@
+env1 (noname) Desktop url: https://console-openshift-console.apps.6a288a14eac020a95f7c53c5.am1.techzone.ibm.com kubeadmin / SPf2Z-pQYP3-vymTJ-DZTBS
+env2 (txch2) Desktop url: https://console-openshift-console.apps.6a2889a57f1b99683096e347.am1.techzone.ibm.com kubeadmin / gwmJP-C8WAz-aHLNt-CWxag
+env3 (txch4) Desktop url: https://console-openshift-console.apps.6a288aa47f1b99683096e349.am1.techzone.ibm.com kubeadmin / 9C4XJ-zrCVK-iCzdY-AabKe
+env4 (txch5) Desktop url: https://console-openshift-console.apps.6a288af1160b6ae422767305.am1.techzone.ibm.com kubeadmin / VwnrX-h5LRZ-L6LnS-fBYp4
+
+
+
+ssh itzuser@api.6a288a14eac020a95f7c53c5.am1.techzone.ibm.com -p 40222 — itzuser / aa8Qg3Kz
+ssh itzuser@api.6a2889a57f1b99683096e347.am1.techzone.ibm.com -p 40222 — itzuser / jvKlgrXg
+ssh itzuser@api.6a288aa47f1b99683096e349.am1.techzone.ibm.com -p 40222 — itzuser / rdkAkbCm
+ssh itzuser@api.6a288af1160b6ae422767305.am1.techzone.ibm.com -p 40222 — itzuser / 6z8npuPf
