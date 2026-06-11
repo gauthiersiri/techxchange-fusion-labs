@@ -180,7 +180,7 @@ nœuds ouvriers. Il est composé de :
 
 - 3 nœuds de stockage pour Fusion Data Foundation (avec stockage local)
 
-- 3 nœuds Worker (nous utiliserons ces nœuds pour le cluster Fusion
+- 4 nœuds Worker (nous utiliserons ces nœuds pour le cluster Fusion
   Access for SAN)
 
 Une seule VM, le nœud IBM Storage Scale, fournit le système de fichiers
@@ -397,7 +397,7 @@ style="width:7.26389in;height:3.73264in" />
 Cliquez maintenant sur **Create storage cluster**. 
 
 À la page suivante, une liste de nœuds OpenShift est affichée.  
-Sélectionnez les trois noeuds Worker auxquels les LUNs ont été attribuées, puis cliquez sur **Create
+Sélectionnez les **quatres** noeuds Worker auxquels les LUNs ont été attribuées, puis cliquez sur **Create
 storage cluster**.  
 Notez que l’interface indique que les 3 noeuds
 sélectionnés partagent bien deux disques entre eux.
