@@ -397,7 +397,7 @@ style="width:7.26389in;height:3.73264in" />
 Cliquez maintenant sur **Create storage cluster**. 
 
 À la page suivante, une liste de nœuds OpenShift est affichée.  
-Sélectionnez les **quatres** noeuds Worker auxquels les LUNs ont été attribuées, puis cliquez sur **Create
+Sélectionnez les **quatre** noeuds Worker auxquels les LUNs ont été attribuées, puis cliquez sur **Create
 storage cluster**.  
 Notez que l’interface indique que les 3 noeuds
 sélectionnés partagent bien deux disques entre eux.
